@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08111F;
+  --surface: #101C2D;
+  --surface-raised: #17263A;
+  --primary: #43D9E8;
+  --violet: #8B7CFF;
+  --text-primary: #F4F7FB;
+  --text-secondary: #9FB0C5;
+}
+
+body {
+  background-color: #08111F;
+  color: #F4F7FB;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1524;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e334d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #43D9E8;
+}
+
+/* Tactical Pulse animations */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep {
+  animation: radar-sweep 12s linear infinite;
+}
